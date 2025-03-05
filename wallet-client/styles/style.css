@@ -1,0 +1,234 @@
+/* General Styles */
+:root {
+    --primary-color: #0056b3; /* Blue */
+    --secondary-color: #5DA399;
+    --accent-color: #FF7F50;
+    --text-dark: #222;
+    --text-light: #fff;
+    --bg-dark: #000; /* Black Header */
+    --nav-bg: #0056b3; /* Blue Navigation */
+    --footer-bg: #0056b3; /* Blue Footer */
+    --cta-border: #0056b3; /* Blue CTA Border */
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* HEADER */
+.header {
+    background: var(--bg-dark);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NAVIGATION BAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px; /* Rounded Borders */
+}
+
+/* Updated Logo Size */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* CTA Button Group (Aligned to Right) */
+.nav-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("hero-bg.jpg") center/cover;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+    text-align: center;
+    background: var(--bg-light);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Feature Grid */
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+}
+
+.feature img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+/* CTA Section (White Section Improved) */
+.cta-section {
+    background: #f9f9f9;
+    color: var(--text-dark);
+    padding: 5rem 0;
+    text-align: center;
+    border: 3px solid var(--cta-border); /* Added Blue Border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+/* FOOTER */
+.footer {
+    background: var(--footer-bg);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
