@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | E-Wallet</title>
+    <link rel="stylesheet" href="/wallet-client/styles/style.css">
+    <link rel="stylesheet" href="/wallet-client/styles/pages.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">E-Wallet</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="log.html">Login</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <main class="form-wrapper">
+        <div class="form-container">
+            <h2 class="form-title">Create Your Account</h2>
+            <p class="form-subtitle">Join the most secure digital wallet platform</p>
+
+            <form id="registrationForm" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" name="full_name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required placeholder="+1234567890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Date of Birth</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter a strong password">
+                    </div>
+                </div>
+
+                <div class="form-group file-upload">
+                    <label for="verification_document">Upload Verification Document</label>
+                    <input type="file" id="verification_document" name="verification_document" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Register</button>
+
+                <p class="form-footer">Already have an account? <a href="log.html">Login here</a></p>
+            </form>
+        </div>
+    </main>
+    <!---JS-->
+    <script src="/wallet-client/js/nav.js"></script>
+    <script src="/wallet-client/js/register.js"></script>
+     <!---Axios-->
+
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+</body>
+</html>
