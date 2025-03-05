@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | E-Wallet</title>
+    <link rel="stylesheet" href="/wallet-client/styles/style.css">
+    <link rel="stylesheet" href="/wallet-client/styles/pages.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">E-Wallet</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <main class="form-wrapper">
+        <div class="form-container">
+            <h2 class="form-title">Welcome, <span id="user-name"></span>!</h2>
+            <p class="form-subtitle">Manage your account details</p>
+
+            <div class="profile-view">
+                <p><strong>Name:</strong> <span id="display-name"></span> <button onclick="toggleEdit()">✏️</button></p>
+                <p><strong>Email:</strong> <span id="display-email"></span></p>
+                <p><strong>Phone:</strong> <span id="display-phone"></span></p>
+                <p><strong>Birthdate:</strong> <span id="display-birthdate"></span></p>
+            </div>
+
+            <form id="editProfileForm" style="display: none;">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Date of Birth</label>
+                    <input type="date" id="birthdate" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/wallet-client/js/nav.js"></script>
+    <script src="/wallet-client/js/profile.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+/* Registration Page Styles */
+.register-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("hero-bg.jpg") center/cover;
+    padding-top: 7rem; /* Spacing below navbar */
+}
+
+.form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px; /* Consistent with buttons & navbar */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    border: 2px solid #ddd;
+}
+
+/* Form Headings */
+.form-container h2 {
+    color: var(--text-dark);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.form-subtext {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+.input-group input:focus,
+.input-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+}
+
+/* File Upload Input */
+.input-group input[type="file"] {
+    padding: 5px;
+    background: #f8f8f8;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: none;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+/* Register Button */
+.form-container .btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.form-container .btn-primary:hover {
+    background: var(--secondary-color);
+}
+
+
+/* General Form Wrapper */
+/* General Form Wrapper */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1a1a2e, #16213e); /* 🔹 Black-Blue Gradient */
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title & Subtitle */
+.form-title {
+    font-size: 24px;
+    color: #16213e; /* 🔹 Dark Blue */
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Layout */
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444; /* 🔹 Darker Border */
+    font-size: 14px;
+    outline: none;
+}
+
+/* Input Focus Effect */
+.form-group input:focus {
+    border-color: #16213e; /* 🔹 Dark Blue Focus */
+    box-shadow: 0px 0px 5px rgba(22, 33, 62, 0.3);
+}
+
+/* File Upload */
+.file-upload input {
+    padding: 8px;
+    border: 1px solid #444; /* 🔹 Darker Border */
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #16213e; /* 🔹 Dark Blue */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0f3460; /* 🔹 Slightly lighter Blue */
+}
+
+/* Form Footer */
+.form-footer {
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.form-footer a {
+    color: #16213e; /* 🔹 Dark Blue */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
